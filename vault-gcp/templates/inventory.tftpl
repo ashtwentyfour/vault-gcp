@@ -1,0 +1,4 @@
+[vault]
+%{ for addr in vault_ips ~}
+${addr[0]}
+%{ endfor ~}
