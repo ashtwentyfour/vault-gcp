@@ -8,7 +8,7 @@ Use this repository to install Vault on Google Cloud Platform (GCP) VMs
 
 * An SSH key pair must be generated prior to executing the Terraform scripts as the path to the public key must be provided
 
-* This installation uses [Auto unseal](https://developer.hashicorp.com/vault/docs/concepts/seal#auto-unseal) and a Cloud KMS keyring will have to be [create](https://cloud.google.com/kms/docs/create-key-ring)
+* This installation uses [Auto unseal](https://developer.hashicorp.com/vault/docs/concepts/seal#auto-unseal) and a Cloud KMS keyring will have to be [created](https://cloud.google.com/kms/docs/create-key-ring)
 
 ```
 gcloud kms keyrings create vault-keyring-01 --location us-east1
