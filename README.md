@@ -181,7 +181,7 @@ vault-vm-2    10.2.0.4:8201    follower    true
 vault-vm-1    10.2.0.3:8201    follower    true
 ```
 
-* Test Vault by creating a test secret key-vault pair:
+* Test Vault by creating a test secret key-value pair:
 
 ```
 vault@vault-vm-0:~$ vault secrets enable -path=secret/ kv
