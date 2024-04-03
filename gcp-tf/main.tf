@@ -45,7 +45,7 @@ resource "google_project_iam_binding" "vault_iam_gce_binding" {
 }
 
 module "vault_network" {
-    source = "./modules/network"
+    source = "github.com/ashtwentyfour/gcp-config//vault-network"
     location = var.location
     cidr_range = var.cidr_range
     bastion_cidr_range = var.bastion_cidr_range
@@ -65,7 +65,7 @@ module "iap_bastion" {
 }
 
 module "vault_cluster" {
-   source = "./modules/vault"
+   source = "github.com/ashtwentyfour/gcp-config//vault-cluster-gce"
    count = var.vault_node_count
    vault_vm_name = "vault-vm-${count.index}"
    vault_kms_service_account = google_service_account.vault_kms_service_account.email
